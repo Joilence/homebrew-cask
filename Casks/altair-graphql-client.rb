@@ -1,9 +1,18 @@
 cask "altair-graphql-client" do
-  version "4.0.2"
-  sha256 "d43f0fecfb5244f1b7c5ccc9a62c5e3f23daa9cbd13d3de1f9531d5cef611861"
+  version "4.0.4"
 
-  url "https://github.com/imolorhe/altair/releases/download/v#{version}/altair_#{version}_mac.zip",
-      verified: "github.com/imolorhe/altair/"
+  if Hardware::CPU.intel?
+    sha256 "119e1618c8ed5bb673234503471308c7540df6f76036064e33141dbc2917eb7e"
+
+    url "https://github.com/imolorhe/altair/releases/download/v#{version}/altair_#{version}_mac.zip",
+        verified: "github.com/imolorhe/altair/"
+  else
+    sha256 "bce7035af3e2b6b71b760d20f51be8a0ad3c568f89e92da7e6d41f41a5b6889a"
+
+    url "https://github.com/imolorhe/altair/releases/download/v#{version}/altair_#{version}_arm64_mac.zip",
+        verified: "github.com/imolorhe/altair/"
+  end
+
   name "Altair GraphQL Client"
   desc "GraphQL client"
   homepage "https://altair.sirmuel.design/"

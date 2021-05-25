@@ -1,6 +1,6 @@
 cask "lark" do
-  version "3.47.7,423a3f"
-  sha256 "c8d900df91e655bc07f565306f501fb2c18349004d8edfb1707b159ea60b3ed5"
+  version "4.0.11,576094"
+  sha256 "0729483b8b120be48becb1961a255e108fe0db69e961a043287fb21b9daabe88"
 
   url "https://sf16-va.larksuitecdn.com/obj/lark-artifact-storage/#{version.after_comma}/Lark-darwin_x64-#{version.before_comma}-signed.dmg",
       verified: "sf16-va.larksuitecdn.com/obj/lark-artifact-storage/"

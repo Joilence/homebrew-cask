@@ -1,6 +1,6 @@
 cask "grids" do
-  version "7.0.6"
-  sha256 "5066b3adedd8173d10e89926ea06262338baacf8eaf188d779ec8b6b299e3b6e"
+  version "7.0.8"
+  sha256 "1adfabdc3221766fe46ac1d4728b077137f41bde0f8937cb558dea8b3fe56c65"
 
   url "https://gridsapp.net/bin/Grids_#{version}.zip"
   name "Grids"
@@ -9,8 +9,7 @@ cask "grids" do
 
   livecheck do
     url "https://gridsapp.net/appcast.json"
-    strategy :page_match
-    regex(/"mac"\s*:\s*"(\d+(?:\.\d+)*)"/i)
+    regex(/"mac"\s*:\s*"v?(\d+(?:\.\d+)+)"/i)
   end
 
   auto_updates true

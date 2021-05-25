@@ -1,6 +1,6 @@
 cask "signal" do
-  version "5.0.0"
-  sha256 "1edc6eaa79d12f2d7fb1361f1b27c10979239f4ea839f15af9789f7e6b2d4f25"
+  version "5.2.1"
+  sha256 "ba3f743efbb71f623a8988789f937819c34cc579194a8fd9dce1fcf9cc0879c5"
 
   url "https://updates.signal.org/desktop/signal-desktop-mac-#{version}.dmg"
   name "Signal"
@@ -8,8 +8,8 @@ cask "signal" do
   homepage "https://signal.org/"
 
   livecheck do
-    url "https://github.com/signalapp/Signal-Desktop"
-    strategy :github_latest
+    url "https://updates.signal.org/desktop/latest-mac.yml"
+    strategy :electron_builder
   end
 
   auto_updates true

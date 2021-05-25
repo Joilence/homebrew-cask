@@ -1,6 +1,6 @@
 cask "remote-desktop-manager" do
-  version "2021.1.3.0"
-  sha256 "fff4c0c746f70ed95d3ac9cad2130126ea06670f8ac7992abfc9fc798c7705f9"
+  version "2021.1.5.0"
+  sha256 "ddfda57689c00f2396a33a1a6c264c13dc8940cf456d0855ad4724aaf41ac39d"
 
   url "https://cdn.devolutions.net/download/Mac/Devolutions.RemoteDesktopManager.Mac.#{version}.dmg",
       verified: "devolutions.net/"
@@ -12,6 +12,8 @@ cask "remote-desktop-manager" do
     url "https://cdn.devolutions.net/download/Mac/RemoteDesktopManager.xml"
     strategy :sparkle
   end
+
+  depends_on macos: ">= :sierra"
 
   app "Remote Desktop Manager.app"
 

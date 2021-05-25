@@ -1,6 +1,6 @@
 cask "flutter" do
-  version "2.0.6"
-  sha256 "d17ebaa5d1df01c8330a7558dbdf5ba1bfcdd12b4f63fc1d56e0f6082c57ed89"
+  version "2.2.0"
+  sha256 "5d1eadcbdb1fd0f31d505e6bf7b85b6480b9e3a24edc0b68c486c018df7819cd"
 
   url "https://storage.googleapis.com/flutter_infra/releases/stable/macos/flutter_macos_#{version}-stable.zip",
       verified: "storage.googleapis.com/flutter_infra/"
@@ -9,7 +9,8 @@ cask "flutter" do
   homepage "https://flutter.dev/"
 
   livecheck do
-    skip "No version information available"
+    url "https://storage.googleapis.com/flutter_infra_release/releases/releases_macos.json"
+    regex(%r{/flutter[._-]macos[._-]v?(\d+(?:\.\d+)+)[._-]stable\.zip}i)
   end
 
   auto_updates true
